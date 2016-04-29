@@ -66,14 +66,12 @@ var walk = function (filePath, handleFile) {
     });
 }
 
-var args = process.argv.slice(2);
-
-console.log(args)
+var args = process.argv.slice(2); 
 
 // simple regExp
 var r_css  = /([a-zA-Z0-9-_\s\.\#\>\+]+)\{([^\{\}]+)\}/g;
 
-walk(args[0] || './', function (file) {
+walk(args[0] || process.cwd(), function (file) {
     if (!/css$/.test(file)) return;
 
     readFile(file).then(function (data) {
