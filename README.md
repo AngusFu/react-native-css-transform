@@ -1,6 +1,9 @@
 
 # react-native-css-transform
 
+[![npm](https://img.shields.io/npm/v/react-native-css-transform.svg?style=flat-square)](https://www.npmjs.com/package/react-native-css-transform)
+[![npm](https://img.shields.io/npm/dt/react-native-css-transform.svg?style=flat-square)](https://www.npmjs.com/package/react-native-css-transform)
+
 transform css files into js files in `react-native-style`
 
 ```bash
