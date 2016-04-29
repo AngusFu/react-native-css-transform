@@ -66,11 +66,14 @@ var walk = function (filePath, handleFile) {
     });
 }
 
+var args = process.argv.slice(2);
+
+console.log(args)
 
 // simple regExp
 var r_css  = /([a-zA-Z0-9-_\s\.\#\>\+]+)\{([^\{\}]+)\}/g;
 
-walk('./test', function (file) {
+walk(args[0] || './', function (file) {
     if (!/css$/.test(file)) return;
 
     readFile(file).then(function (data) {
@@ -83,7 +86,7 @@ walk('./test', function (file) {
             obj[selector] = cssToJs(_.trim(temp[2]));
         }
 
-        fs.writeFile(file + '.js', JSON.stringify(obj, null, 4), (err) => {
+        fs.writeFile(file + '.js', getStyle(obj), (err) => {
             if (err) throw err;
         });
 
@@ -92,3 +95,18 @@ walk('./test', function (file) {
     });
 });
 
+function getStyle(css) {
+    return (`
+/**
+ * create by react-native-css-transform
+ * see: https://github.com/AngusFu/react-native-css-transform
+ */
+
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create(${JSON.stringify(css, null, 4)});
+
+export default styles;
+`
+    );
+};
