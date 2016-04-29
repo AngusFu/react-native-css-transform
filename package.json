@@ -1,0 +1,27 @@
+{
+  "name": "react-native-css-transform",
+  "version": "1.0.0",
+  "description": "transform css files into react-native StyleSheet Object ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngusFu/react-native-css-transform.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "css"
+  ],
+  "author": "angusfu1126@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AngusFu/react-native-css-transform/issues"
+  },
+  "homepage": "https://github.com/AngusFu/react-native-css-transform#readme",
+  "dependencies": {
+    "lodash": "^4.11.1"
+  }
+}
