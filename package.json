@@ -1,6 +1,6 @@
 {
   "name": "react-native-css-transform",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "transform css files into react-native StyleSheet Object ",
   "main": "index.js",
   "scripts": {
