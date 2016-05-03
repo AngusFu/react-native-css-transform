@@ -23,7 +23,7 @@ watch files
 
 ```css
 
-a {
+img {
     flex: 2;
     justify-content: 'center';
     margin: 20 14 20 14;
