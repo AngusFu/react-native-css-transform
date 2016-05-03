@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var _ = require('lodash');
 
-var cssToJs = require('./lib/cssToJs');
+var cssToJs = require('rn-css-transform');
 
 /**
  * 读取文件 返回 Promise 对象
